@@ -1,0 +1,53 @@
+{
+  "name": "greenfieldinnovation-com",
+  "private": true,
+  "description": "greenfieldinnovation.com site and blog",
+  "version": "0.1.0",
+  "author": "Monte Hayward <code@montehayward.com>",
+  "dependencies": {
+    "@emotion/core": "10.0.7",
+    "gatsby": "^2.1.4",
+    "gatsby-image": "^2.0.29",
+    "gatsby-plugin-emotion": "4.0.3",
+    "gatsby-plugin-manifest": "^2.0.17",
+    "gatsby-plugin-offline": "^2.0.23",
+    "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-sharp": "^2.0.20",
+    "gatsby-source-filesystem": "^2.0.20",
+    "gatsby-transformer-remark": "2.2.5",
+    "gatsby-transformer-sharp": "^2.1.13",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "node --inspect --no-lazy node_modules/gatsby/dist/commands/develop.js",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greenfield-innovation/greenfieldinnovation-com/issues"
+  },
+  "bugs": {
+    "url": "https://github.com/greenfield-innovation/greenfieldinnovation-com/issues"
+  },
+  "devDependencies": {
+    "eslint": "5.15.1",
+    "eslint-config-fbjs": "2.1.0",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-flowtype": "3.4.2",
+    "eslint-plugin-jsx-a11y": "6.2.1",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "eslint-plugin-relay": "1.0.0"
+  }
+}
