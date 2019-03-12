@@ -46,7 +46,7 @@ class PostsList extends React.Component {
 }
 
 PostsList.propTypes = {
-  posts: PropTypes.node.isRequired,
+  posts: PropTypes.array.isRequired,
 };
 
 export default PostsList;
