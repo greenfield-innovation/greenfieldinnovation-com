@@ -1,0 +1,52 @@
+import React from 'react';
+import { Link } from 'gatsby';
+import { rhythm } from '../utils/typography';
+import { formatPostDate } from '../utils/helpers';
+
+
+import PropTypes from 'prop-types';
+
+class PostsList extends React.Component {
+  render() {
+    const {posts} = this.props;
+
+    return (posts.map(({node}) => {
+      const title = node.frontmatter.title || node.fields.slug;
+      return (
+        <article key={node.fields.slug}>
+          <header>
+            <h3
+              style={{
+                fontFamily: 'Montserrat, sans-serif',
+                fontSize: rhythm(1),
+                marginBottom: rhythm(1 / 4),
+              }}
+            >
+              <Link
+                style={{boxShadow: 'none'}}
+                to={node.fields.slug}
+                rel="bookmark"
+              >
+                {title}
+              </Link>
+            </h3>
+            <small>
+              {formatPostDate(node.frontmatter.date, 'en')}
+              {` • ${node.timeToRead}`}
+            </small>
+          </header>
+          <p
+            dangerouslySetInnerHTML={{__html: node.frontmatter.spoiler}}
+          />
+        </article>
+      );
+    })
+    );
+  }
+}
+
+PostsList.propTypes = {
+  posts: PropTypes.node.isRequired,
+};
+
+export default PostsList;
