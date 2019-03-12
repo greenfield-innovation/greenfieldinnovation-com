@@ -12,6 +12,9 @@ class PostsList extends React.Component {
 
     return (posts.map(({node}) => {
       const title = node.frontmatter.title || node.fields.slug;
+      if (!node.fields.slug.includes('/blog')) {
+        return (null);  // ignore site pages
+      }
       return (
         <article key={node.fields.slug}>
           <header>
@@ -40,8 +43,7 @@ class PostsList extends React.Component {
           />
         </article>
       );
-    })
-    );
+    }));
   }
 }
 
