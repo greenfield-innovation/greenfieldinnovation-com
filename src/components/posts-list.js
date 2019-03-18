@@ -39,7 +39,7 @@ class PostsList extends React.Component {
             </small>
           </header>
           <p
-            dangerouslySetInnerHTML={{__html: node.frontmatter.spoiler}}
+            dangerouslySetInnerHTML={{__html: node.excerpt}}
           />
         </article>
       );
