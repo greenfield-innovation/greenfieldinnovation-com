@@ -8,12 +8,10 @@ import SEO from '../components/seo';
 class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const posts = data.allMarkdownRemark.edges;
-
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
-        <PostsList posts={posts}/>
+        <PostsList/>
       </Layout>
     );
   }
@@ -22,27 +20,5 @@ class IndexPage extends React.Component {
 export default IndexPage;
 
 
-export const pageQuery = graphql`
-  query {
-      allMarkdownRemark(
-        sort: {fields: [frontmatter___date], order: DESC}
-      ) {
-        totalCount
-        edges {
-          node {
-            id
-            frontmatter {
-              title
-              date(formatString: "DD MMMM, YYYY")
-              author
-            }
-            excerpt
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-`;
+
 

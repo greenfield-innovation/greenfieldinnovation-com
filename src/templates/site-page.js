@@ -3,11 +3,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from "../components/posts-list";
 
-// TODO:
-// const posts = data.allMarkdownRemark.edges;
-//       <aside>
-//         <PostsList posts={posts}/>
-//       </aside>
 
 
 export default ({ data }) => {
@@ -21,6 +16,9 @@ export default ({ data }) => {
         </header>
         <div dangerouslySetInnerHTML={{ __html: article.html }}/>
       </article>
+      <aside>
+        <PostsList/>
+      </aside>
     </Layout>
   );
 };
