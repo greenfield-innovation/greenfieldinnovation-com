@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `GIG`,
-    description: `Greenfield Innovation Group`,
+    title: `Greenfield Innovation Group`,
+    description: `Guiding technology companies from zero to product launch`,
     author: `@monte_hayward`,
   },
   plugins: [
@@ -38,6 +38,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require(`sass`), // dart sass
+        data: `@import 'palette.module.scss';`,
+      },
+    },
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {

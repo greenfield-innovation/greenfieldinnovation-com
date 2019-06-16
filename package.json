@@ -50,6 +50,8 @@
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-react": "7.12.4",
-    "eslint-plugin-relay": "1.0.0"
+    "eslint-plugin-relay": "1.0.0",
+    "gatsby-plugin-sass": "2.0.11",
+    "sass": "1.21.0"
   }
 }

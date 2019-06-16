@@ -1,17 +1,26 @@
 import React from 'react';
-import { css } from '@emotion/core';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import PostsList from "../components/posts-list";
+
+// TODO:
+// const posts = data.allMarkdownRemark.edges;
+//       <aside>
+//         <PostsList posts={posts}/>
+//       </aside>
+
 
 export default ({ data }) => {
-  const post = data.markdownRemark;
+  const article = data.markdownRemark;
+
   return (
     <Layout>
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <span css={css`display:inline-block;color:#bbb;`}>{post.frontmatter.date}</span>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      <article>
+        <header>
+          <h1>{article.frontmatter.title}</h1>
+        </header>
+        <div dangerouslySetInnerHTML={{ __html: article.html }}/>
+      </article>
     </Layout>
   );
 };
@@ -22,8 +31,6 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
-        author
       }
     }
   }

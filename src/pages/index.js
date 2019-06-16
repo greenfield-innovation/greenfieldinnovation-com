@@ -7,17 +7,13 @@ import SEO from '../components/seo';
 
 class IndexPage extends React.Component {
   render() {
-    const {data} = this.props;
+    const { data } = this.props;
     const posts = data.allMarkdownRemark.edges;
 
     return (
       <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
-        <h1>Greenfield Innovation Group</h1>
-        <p>gig guides technology companies from zero to product launch.</p>
-        <div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
-          <PostsList posts={posts} />
-        </div>
+        <PostsList posts={posts}/>
       </Layout>
     );
   }

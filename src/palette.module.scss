@@ -1,0 +1,24 @@
+$bgLogo: rgba(76, 140, 43, 1);
+$bg: rgba(216, 218, 211, 1);
+$bgMain: rgba(241, 242, 235, 1);
+$text: rgba(74, 74, 72, 1);
+$highlight: rgba(164, 194, 165, 1);
+
+body {
+  background: $bgMain;
+  color: $text;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0px 1.0875rem 1.45rem;
+}
+header {
+  display: flex;
+}
+main {
+  background: white;
+  padding: 1.5rem;
+}
+
+a {
+  color: $highlight;
+}

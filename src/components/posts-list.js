@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import { rhythm } from '../utils/typography';
 import { formatPostDate } from '../utils/helpers';
 
+//TODO: ${node.timeToRead}
 
 import PropTypes from 'prop-types';
 
@@ -35,7 +36,6 @@ class PostsList extends React.Component {
             </h3>
             <small>
               {formatPostDate(node.frontmatter.date, 'en')}
-              {` • ${node.timeToRead}`}
             </small>
           </header>
           <p
