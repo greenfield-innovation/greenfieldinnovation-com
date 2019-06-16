@@ -18,13 +18,14 @@ const Flex = ({
   createElement(
     type,
     {
-      css: {
+      style: {
         display: 'flex',
         flexDirection: direction,
         flexGrow: grow,
         flexShrink: shrink,
         flexBasis: basis,
-        justifyContent: direction === 'row' ? halign : valign,
+        justifyContent: `space-between`,
+        justifyItems: 'space-between',
         alignItems: direction === 'row' ? valign : halign,
       },
     },

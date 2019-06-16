@@ -15,17 +15,24 @@ class NavSitePages extends React.Component {
         return (null);  // ignore site pages
       }
       return (
-        <Link key={node.fields.slug}
-              style={{boxShadow: 'none'}}
-              to={node.fields.slug}
-              rel="bookmark"
+        <li
+          key={node.fields.slug}
+          style={{
+            listStyleType: `none`,
+          }}
         >
-          {title}
-        </Link>
+          <Link
+                style={{boxShadow: 'none'}}
+                to={node.fields.slug}
+                rel="bookmark"
+          >
+            {title}
+          </Link>
+        </li>
       );
     });
 
-    return (<Flex>{links}</Flex>);
+    return (<Flex type="ul">{links}</Flex>);
   }
 }
 

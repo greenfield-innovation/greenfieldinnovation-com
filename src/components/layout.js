@@ -53,9 +53,9 @@ const Layout = ({children}) => (
             <footer>
               <small>
                 <NavSitePages posts={posts}/>
-                © {new Date().getFullYear()}, Built with
+                © {new Date().getFullYear()}
                 {` `}
-                <a href="https://www.gatsbyjs.org">Gatsby</a>
+                <a href="/">Greenfield Innovation Group</a>
               </small>
             </footer>
           </div>
