@@ -49,7 +49,7 @@ query {
           <h3
           style={{
             fontFamily: 'Montserrat, sans-serif',
-            fontSize: rhythm(1),
+            // fontSize: rhythm(1),
             marginBottom: rhythm(1 / 4),
           }}
           >

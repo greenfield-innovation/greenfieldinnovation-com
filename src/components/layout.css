@@ -13,12 +13,22 @@ figcaption,
 figure,
 footer,
 header,
-main,
 menu,
 nav,
 section,
 summary {
   display: block;
+}
+main {
+  display: flex;
+
+}
+article {
+  width: 75%;
+}
+aside {
+  width: 25%;
+  font-size: 80%;
 }
 audio,
 canvas,
@@ -183,7 +193,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -263,7 +272,6 @@ h3 {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
   line-height: 1.1;
 }
 h4 {
